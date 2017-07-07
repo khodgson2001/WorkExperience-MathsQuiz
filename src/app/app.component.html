@@ -1,0 +1,72 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+ <p [hidden]="questionHide">{{quest}} = </p>
+  <img width="300" src="https://www.tes.com/sites/default/files/maths_blackboard.jpg">
+<br>
+<br>
+<!--Choices (NEEDS TS COMPLETING)-->
+
+<button (click)="easy()"[hidden]="hideStart">Easy</button>
+<button (click)="med()"[hidden]="hideStart">Medium</button>
+<button (click)="hard()"[hidden]="hideStart">Hard</button>
+<br>
+<br>
+<button (click)="with()"[hidden]="hideStart">With multiplication and Division</button>
+<button (click)="without()"[hidden]="hideStart">Without multiplication and Division</button>
+<br>
+<!--input-->
+<br>
+  <label [hidden] = "isHidden">Answer:</label>
+  <input [(ngModel)]="usersInput" (keypress)= "enter($event)" placeholder="Answer" [hidden]="isHidden">
+  <button (click)="aClick()" [hidden]="isHidden">Submit</button>
+<br>
+<br>
+<!--Score + Counter -->
+<label [hidden]="scoreNCounter">Score:{{score}}</label>
+<br>
+<br>
+  <label [hidden]="scoreNCounter">Question Number: {{counter}}</label><br>
+  <!--Show/hide -->
+<button (click)="reset()">Reset?</button>
+<!--<p *ngIf="showHide">asdf</p>-->
+
+<button (click)="createTimer(); start()" [hidden]="hideStart">START</button>
+
+<button (click)="showTable1()" [hidden]= "isHidden">showTable</button>
+
+<p id="dateTimer"></p>
+<p>{{timeString}}</p>
+<br>
+
+</div>
+<div style="text-align:center" [hidden]="showTable">
+    <label> Class:</label>
+    <input  [(ngModel)]="class" type ="text"  placeholder="Class">
+    <label> Name:</label>
+    <input  [(ngModel)]="name1" type ="text"  placeholder="Name">
+    <button  (click)="Sub2()" [disabled] = "disSub2">Submit</button>
+
+    <table style="text-align:center" class="table">
+  <thead>
+    <th>Class</th>
+    <th>Name</th>
+    <th>Score</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let o of scoreboard">
+      <td>
+        {{o.class}}
+      </td>
+      <td>
+        {{o.name1}}
+      </td>
+      <td>
+        {{o.score}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
