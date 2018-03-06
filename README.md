@@ -41,7 +41,7 @@ To replicate my work, you would need to have the following:
  - A cloud database (Firebase)
 To get started start a new Git Bash (or whatever you are using).
 Then install angular-cli with `npm i -g @angular/cli`
-You then need o create an angular app using the angular-cli with `ng new "project name"`
+You then need to create an angular app using the angular-cli with `ng new "project name"`
 Once done, do the command `ng serve`. This will allow you to run the app in development before making any commitments in GitHub.
 For editing, make the changes in files `app.component.html` and `app.component.ts`in the file area `<ProjectName/src/app/`. You can view any changes at `localhost:4200`
 
