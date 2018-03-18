@@ -38,18 +38,28 @@ export class AppComponent {
      alert("Easy choice chosen! \n You will be playing with numbers between 1-5");
      if (this.multiDiv == 2){
        this.operators = ['+','-','/','*'];
-     }}
+     }
+     else{
+     this.operators = ['+', '-']
+    }
+  }
    med(){this.diff = 10;
      alert("Medium choice chosen! \n You will be playing with numbers between 1-10");
      if (this.multiDiv == 2){
        this.operators = ['+','-','/','*'];
      }
+     else{
+     this.operators = ['+', '-']
+    }
    }
    hard(){this.diff = 20;
      alert("Hard choice chosen! \n You will be playing with numbers between 1-20");
      if (this.multiDiv == 2){
        this.operators = ['+','-','/','*'];
      }
+     else{
+     this.operators = ['+', '-']
+    }
    }
    No1 = Math.floor(Math.random() * this.diff + 1);
    No2 = Math.floor(Math.random() * this.diff + 1);
