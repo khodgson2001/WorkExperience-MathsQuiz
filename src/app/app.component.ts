@@ -28,7 +28,7 @@ export class AppComponent {
    //def 2 operators + they will change a around line 28
    with(){
      this.multiDiv = 2;
-     alert("You have selected Multiplicaition and Division.\n You will be playing with all 4 operators.");
+     alert("You have selected Multiplicaition and Division.\n You will be playing with all 4 operators. \n When using division, don't include remainders.");
    }
    without(){
      this.multiDiv = 1;
@@ -37,7 +37,7 @@ export class AppComponent {
    easy(){this.diff = 5;
      alert("Easy choice chosen! \n You will be playing with numbers between 1-5");
      if (this.multiDiv == 2){
-       this.operators = ['+','-','/','*'];
+       this.operators = ['+','-','DIV','*'];
      }
      else{
      this.operators = ['+', '-']
@@ -46,7 +46,7 @@ export class AppComponent {
    med(){this.diff = 10;
      alert("Medium choice chosen! \n You will be playing with numbers between 1-10");
      if (this.multiDiv == 2){
-       this.operators = ['+','-','/','*'];
+       this.operators = ['+','-','DIV','*'];
      }
      else{
      this.operators = ['+', '-']
@@ -55,7 +55,7 @@ export class AppComponent {
    hard(){this.diff = 20;
      alert("Hard choice chosen! \n You will be playing with numbers between 1-20");
      if (this.multiDiv == 2){
-       this.operators = ['+','-','/','*'];
+       this.operators = ['+','-','DIV','*'];
      }
      else{
      this.operators = ['+', '-']
